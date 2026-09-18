@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Manutenção</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Controle de Manutenção</h1>
+        <p>Registro e acompanhamento de solicitações</p>
+      </header>
+
+      <main>
+        <section class="panel">
+          <div class="section-header">
+            <h2 id="formTitle">Nova ocorrência</h2>
+            <button id="cancelEditBtn" class="secondary-button hidden" type="button">Cancelar</button>
+          </div>
+
+          <div id="feedbackMessage" class="feedback hidden"></div>
+
+          <form id="maintenanceForm">
+            <label>
+              Equipamento ou máquina
+              <input type="text" id="equipment" name="equipment" placeholder="Ex: Torno CNC 02" required />
+            </label>
+
+            <label>
+              Setor
+              <input type="text" id="sector" name="sector" placeholder="Ex: Produção" required />
+            </label>
+
+            <label>
+              Problema
+              <textarea id="description" name="description" placeholder="Descreva o problema encontrado" required></textarea>
+            </label>
+
+            <label>
+              Prioridade
+              <select id="priority" name="priority" required>
+                <option value="Alta">Alta</option>
+                <option value="Média">Média</option>
+                <option value="Baixa">Baixa</option>
+              </select>
+            </label>
+
+            <label>
+              Status
+              <select id="status" name="status" required>
+                <option value="aberto">Aberto</option>
+                <option value="emManutencao">Em manutenção</option>
+                <option value="concluido">Concluído</option>
+              </select>
+            </label>
+
+            <label>
+              Responsável pela solicitação
+              <input type="text" id="responsible" name="responsible" placeholder="Ex: João da Silva" required />
+            </label>
+
+            <button type="submit" id="submitBtn" class="button">Salvar ocorrência</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="list-header">
+            <h2>Ocorrências cadastradas</h2>
+            <span id="totalRequests" class="badge-total">0</span>
+          </div>
+
+          <label class="search-label">
+            <span>Consultar ocorrências</span>
+            <input type="text" id="searchInput" placeholder="Buscar por equipamento, setor ou responsável" />
+          </label>
+
+          <div id="requestsList" class="requests-list"></div>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

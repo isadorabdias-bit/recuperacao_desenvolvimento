@@ -1,0 +1,24 @@
+{
+  "name": "recuperacao_desenvolvimento",
+  "version": "1.0.0",
+  "description": "Este projeto consiste em um aplicativo web mobile-first para registrar, consultar, atualizar e excluir ocorrências de manutenção em uma empresa. A aplicação foi desenvolvida com HTML, CSS e JavaScript, com a programação organizada em arquivos separados para facilitar manutenção e leitura do código.",
+  "main": "playwright_check.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isadorabdias-bit/recuperacao_desenvolvimento.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isadorabdias-bit/recuperacao_desenvolvimento/issues"
+  },
+  "homepage": "https://github.com/isadorabdias-bit/recuperacao_desenvolvimento#readme",
+  "dependencies": {
+    "jsdom": "^29.1.1",
+    "playwright": "^1.63.0"
+  }
+}
